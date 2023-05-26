@@ -1,5 +1,7 @@
 {
-  "name": "descomplica-firebase",
-  "integrations": {},
+  "name": "ap14-firebase",
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }

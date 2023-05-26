@@ -1,41 +1,52 @@
-import { Router } from '@angular/router';
-import { ProductService } from '../shared/product.service';
+import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { ProductService } from '../shared/product.services';
+import { Router } from '@angular/router';
 
+@Component({
+  selector: 'app-tab3',
+  templateUrl: 'tab3.page.html',
+  styleUrls: ['tab3.page.scss']
+})
 export class Tab3Page {
   bookingForm: FormGroup = this.fb.group({
     name: [''],
+    desc: [''],
+    price: ['']
 
-    email: [''],
-
-    mobile: [''],
   });
 
   constructor(
     private aptService: ProductService,
-
     private router: Router,
-
     public fb: FormBuilder
-  ) {}
 
-  ngOnInit() {}
+  ) { }
+
+  ngOnInit() {  }
 
   formSubmit() {
+
     if (!this.bookingForm.valid) {
+      console.log("não enviou...");
       return false;
+
     } else {
-      this.aptService
-        .createProduct(this.bookingForm.value)
-        .then((res: any) => {
-          console.log(res);
+      
+      console.log("enviando...");
 
-          this.bookingForm.reset();
+      this.aptService.createProduct(this.bookingForm.value).then((res: any) => {
 
-          this.router.navigate(['/home']);
-        })
+        console.log(res);
+        console.log("Enviado: ", this.bookingForm.value);
 
-        .catch((error: any) => console.log(error));
+        this.bookingForm.reset();
+
+        this.router.navigate(['/tabs/tab2']);
+
+      }).catch((error: any) => console.log(error));
+        return;
     }
   }
 }
+

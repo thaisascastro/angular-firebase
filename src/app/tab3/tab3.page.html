@@ -1,37 +1,39 @@
 <ion-header>
   <ion-toolbar class="ios hydrated">
-    <ion-title class="ios title-ios hydrated">Booking</ion-title>
+    <ion-title class="ios title-ios hydrated">Cadastrar no Estoque</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content [fullscreen]="true">
+
   <ion-list lines="full">
     <form [formGroup]="bookingForm" (ngSubmit)="formSubmit()">
-      <ion-item>
-        <ion-label position="floating">Name</ion-label>
 
+      <ion-item>
+        <label>Nome: </label>
         <ion-input formControlName="name" type="text" required></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-label position="floating">Desc</ion-label>
-
-        <ion-input formControlName="desc" type="text" required> </ion-input>
+        <label position="floating">Descrição: </label>
+        <ion-input formControlName="desc" type="text" required>
+        </ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-label position="floating">Price</ion-label>
-
-        <ion-input formControlName="price" type="text" required> </ion-input>
+        <label position="floating">Preço: </label>
+        <ion-input formControlName="price" type="number" required>
+        </ion-input>
       </ion-item>
 
       <ion-row>
         <ion-col>
-          <ion-button type="submit" color="primary" shape="full" expand="block"
-            >Save product</ion-button
-          >
+          <ion-button color="success" type="submit" shape="full" expand="block">Salvar</ion-button>
         </ion-col>
       </ion-row>
+
     </form>
+
   </ion-list>
+
 </ion-content>
