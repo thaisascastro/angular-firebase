@@ -5,16 +5,17 @@
 export const environment = {
   production: false,
   firebaseConfig: {
-    apiKey: "AIzaSyAORI5OXgJYECsbqREdneOF1-y_K2pYpp0",
-    authDomain: "estoque-de-produtos-app-id.firebaseapp.com",
-    databaseURL: "https://estoque-de-produtos-app-id-default-rtdb.firebaseio.com",
-    projectId: "estoque-de-produtos-app-id",
-    storageBucket: "estoque-de-produtos-app-id.appspot.com",
-    messagingSenderId: "955095570639",
-    appId: "1:955095570639:web:03205e7ccd27ece2083fba",
-    measurementId: "G-8RB7X62LXE"
-  }
-}
+    apiKey: 'AIzaSyBYLO773eDEx_sJHKbjSEpZvqRUaWll_vA',
+    authDomain: 'angular-firebase-descomplica.firebaseapp.com',
+    databaseURL:
+      'https://angular-firebase-descomplica-default-rtdb.firebaseio.com',
+    projectId: 'angular-firebase-descomplica',
+    storageBucket: 'angular-firebase-descomplica.appspot.com',
+    messagingSenderId: '238215436815',
+    appId: '1:238215436815:web:ed02d2eb9b18b06baee17a',
+    measurementId: 'G-9P3058DGCG',
+  },
+};
 
 /*
  * For easier debugging in development mode, you can import the following file
